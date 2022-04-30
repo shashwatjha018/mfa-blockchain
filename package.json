@@ -1,0 +1,40 @@
+{
+  "name": "two-chain",
+  "version": "1.0.0",
+  "description": "Two Factor Authentication Using Blockchain and Smart Contract",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "eth-network": "ganache-cli --mnemonic dongseo",
+    "init-db": "node 2fa_server/sql_create_table",
+    "delete-db": "node 2fa_server/sql_delete_table",
+    "2fa-server": "truffle deploy && node 2fa_server/2fa",
+    "2fa-client": "node client/eth_tools",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrkazawa/two-chain.git"
+  },
+  "author": "Yustus Oktian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrkazawa/two-chain.gitissues"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "ejs": "^2.7.1",
+    "eth-crypto": "^1.4.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "ganache-cli": "^6.6.0",
+    "prompts": "^2.3.0",
+    "secp256k1": "^4.0.3",
+    "sqlite3": "^4.1.0",
+    "truffle": "^5.0.33",
+    "truffle-assertions": "^0.9.1",
+    "web3": "^1.2.1"
+  }
+}
